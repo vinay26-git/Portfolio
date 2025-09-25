@@ -5,7 +5,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #111; /* Dark text */
-    background-color: #856363; /* Light background */
+    background-color: #243580af; /* Light background */
 }
 
 a {
@@ -22,44 +22,166 @@ h1, h2, h3 {
 }
 
 section {
-    max-width: 1350px;
-    margin: 50px auto;
+    max-width: 1200px;
+     margin: 50px auto;
     padding: 0 20px;
 }
 
 /* ---------------- Hero Section ---------------- */
 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3c646b; /* Black background */
-    color: white; /* White text */
-    padding: 60px 20px;
-    border-radius: 30px 30px 30px 30px;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to stack on smaller screens */
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 300px; /* Space between the image and the text */
+  background-color: #006064;
+  color: white;
+  padding: 60px 40px;
+  border-radius: 30px;
+  margin-top: 30px;
 }
 
-.hero-left {
-    flex: 1;
-    min-width: 280px;
+/* Image on the left */
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 7px solid white;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
 }
 
-.hero-left h1 {
-    font-size: 2.8em;
+/* Text on the right */
+.hero-text {
+  flex: 1;
+  min-width: 300px;
 }
 
-.hero-left .highlight {
-    color: #fff; /* White highlight */
+.hero-text h1 {
+  font-size: 3em;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
-.hero-right img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
+.hero-text h3 {
+  font-size: 1.4em;
+  font-weight: 300; /* Lighter font for the subtitle */
+  margin-bottom: 30px;
 }
 
+.hero-text .highlight {
+  color: #fff;
+}
+
+/* --- Social Icon Links --- */
+.social-links {
+  display: flex;
+  gap: 25px; /* Space between icons */
+}
+
+.social-links a {
+  color: white;
+  font-size: 2.2rem; /* Controls the size of the icons */
+  text-decoration: none;
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.social-links a:hover {
+  transform: scale(1.2); /* Makes icon slightly larger on hover */
+}
+
+/* ---------------- About Me Section ---------------- */
+#about {
+  text-align: center;
+}
+
+/* Main flex container for the two columns */
+.about-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 30px;
+  text-align: left;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* Left column (Education & Experience) */
+.details-column {
+  flex: 1; /* Takes up 1 part of the space */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; 
+}
+
+/* Right column (Career Summary) */
+.summary-column {
+  flex: 1.5; /* Makes this column 1.5 times wider */
+  min-width: 300px;
+  background-color: #f4f4f4;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.summary-column h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #3c646b;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Styling for the Education and Experience boxes */
+.info-box {
+  background-color: #f4f4f4;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: #3c646b;
+}
+
+.info-box p {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.info-box a {
+    color: #3c646b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+/* Download Resume Button */
+.btn-download {
+  display: inline-block;
+  margin-top: 20px; /* Space from the text above */
+  background-color: #3c646b; /* Your theme color */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-download:hover {
+  background-color: #2b484d; /* A darker shade on hover */
+  transform: translateY(-2px); /* A slight "lift" effect */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  text-decoration: none;
+}
+
+/* Styles the icon inside the button */
+.btn-download i {
+  margin-right: 8px;
+}
 /* ---------------- Skills Section ---------------- */
 .skills-list {
     display: flex;
