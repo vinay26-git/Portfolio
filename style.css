@@ -1,16 +1,21 @@
- 
-/* ---------------- General Styles ---------------- */
+/* ==================== FONTS & GENERAL STYLES ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #111; /* Dark text */
-    background-color: #243580af; /* Light background */
+    color: #111;
+    background-color: #fdfdfd;
 }
 
 a {
-    color: #4398ad; /* Black links */
+    color: #3c646b;
     text-decoration: none;
 }
 
@@ -24,528 +29,236 @@ h1, h2, h3 {
 
 section {
     max-width: 1200px;
-     margin: 50px auto;
+    margin: 80px auto; /* Increased margin for better spacing */
     padding: 0 20px;
 }
 
-/* ---------------- Hero Section ---------------- */
+/* ==================== HEADER / NAVIGATION ==================== */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end; /* Aligns nav to the right */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #006064;
+}
+
+/* ==================== HERO SECTION ==================== */
 .hero {
-  display: flex;
-  flex-wrap: wrap; /* Allows items to stack on smaller screens */
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 300px; /* Space between the image and the text */
-  background-color: #006064;
-  color: white;
-  padding: 60px 40px;
-  border-radius: 30px;
-  margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    background-color: #006064;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 30px;
+    margin-top: 50px;
 }
 
-/* Image on the left */
 .hero-image img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  border: 7px solid white;
-  object-fit: cover;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 7px solid white;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
 }
 
-/* Text on the right */
 .hero-text {
-  flex: 1;
-  min-width: 300px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .hero-text h1 {
-  font-size: 3em;
-  line-height: 1.2;
-  margin-bottom: 10px;
+    font-size: 3em;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
 .hero-text h3 {
-  font-size: 1.4em;
-  font-weight: 300; /* Lighter font for the subtitle */
-  margin-bottom: 30px;
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
 
-.hero-text .highlight {
-  color: #fff;
-}
-
-/* --- Social Icon Links --- */
 .social-links {
-  display: flex;
-  gap: 25px; /* Space between icons */
+    display: flex;
+    gap: 25px;
 }
 
 .social-links a {
-  color: white;
-  font-size: 2.2rem; /* Controls the size of the icons */
-  text-decoration: none;
-  transition: transform 0.3s ease; /* Smooth animation */
+    color: white;
+    font-size: 2.2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 .social-links a:hover {
-  transform: scale(1.2); /* Makes icon slightly larger on hover */
+    transform: scale(1.2);
 }
 
-/* ---------------- About Me Section ---------------- */
+/* ==================== ABOUT ME SECTION ==================== */
 #about {
-  text-align: center;
-}
-
-/* Main flex container for the two columns */
-.about-container {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 30px;
-  text-align: left;
-  margin-top: 20px;
-  align-items: flex-start;
-}
-
-/* Left column (Education & Experience) */
-.details-column {
-  flex: 1; /* Takes up 1 part of the space */
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px; 
-}
-
-/* Right column (Career Summary) */
-.summary-column {
-  flex: 1.5; /* Makes this column 1.5 times wider */
-  min-width: 300px;
-  background-color: #f4f4f4;
-  padding: 25px;
-  border-radius: 10px;
-}
-
-.summary-column h3 {
-  margin-top: 0;
-  border-bottom: 2px solid #3c646b;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-}
-
-/* Styling for the Education and Experience boxes */
-.info-box {
-  background-color: #f4f4f4;
-  padding: 25px;
-  border-radius: 10px;
-}
-
-.info-box h3 {
-  margin-top: 0;
-  color: #3c646b;
-}
-
-.info-box p {
-  margin-bottom: 5px;
-  line-height: 1.5;
-}
-
-.info-box a {
-    color: #3c646b;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.info-box a:hover {
-    text-decoration: underline;
-}
-
-/* Download Resume Button */
-.btn-download {
-  display: inline-block;
-  margin-top: 20px; /* Space from the text above */
-  background-color: #3c646b; /* Your theme color */
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.btn-download:hover {
-  background-color: #2b484d; /* A darker shade on hover */
-  transform: translateY(-2px); /* A slight "lift" effect */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  text-decoration: none;
-}
-
-/* Styles the icon inside the button */
-.btn-download i {
-  margin-right: 8px;
-}
-/* ---------------- Skills Section ---------------- */
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-.skills-list li {
-    background-color: #fff; /* White cards */
-    color: #000; /* Black text */
-    margin: 10px;
-    padding: 12px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* ---------------- Projects / Cards ---------------- */
-#projects {
     text-align: center;
-    padding: 40px 10px;
 }
 
-.projects-grid {
+.about-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; 
     gap: 30px;
-    flex-wrap: wrap;
+    text-align: left;
     margin-top: 20px;
+    align-items: flex-start;
 }
 
-.project-card {
-    width: 350px;
-    height: 450px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
+.details-column {
+    flex: 1;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 25px;
-    box-sizing: border-box;
-    color: #ffffff;
-    text-align: left;
+    gap: 25px; 
 }
 
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    filter: blur(3px) brightness(0.7);
-    z-index: -1;
-    transition: transform 0.4s ease-in-out;
-}
-
-.project-card:hover::before {
-    transform: scale(1.1);
-}
-
-#hr-project::before {
-    background-image: url('images/hr-image.jpg'); 
-}
-
-#scrapy-project::before {
-    background-image: url('images/scrapy-image.jpg');
-}
-
-#chat-project::before {
-    background-image: url('images/chat-image.jpg');
-}
-
-.card-content {
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-}
-
-.card-content h3 {
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-}
-
-.card-content p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-.card-links {
-    margin-top: 20px;
-}
-
-.card-links a {
-    color: #fff;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 8px 15px;
-    border-radius: 20px;
-    margin-right: 10px;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.card-links a:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* ---------------- Education & Certifications ---------------- */
-/* Tip: Consider giving your education list a class for more specific styling */
-#education ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-#education ul li {
-    margin-bottom: 8px;
-}
-
-
-/* ---------------- General Styles ---------------- */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #111; /* Dark text */
-    background-color: #243580af; /* Light background */
-}
-
-a {
-    color: #4398ad; /* Black links */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-h1, h2, h3 {
-    margin: 0 0 10px 0;
-}
-
-section {
-    max-width: 1200px;
-     margin: 50px auto;
-    padding: 0 20px;
-}
-
-/* ---------------- Hero Section ---------------- */
-.hero {
-  display: flex;
-  flex-wrap: wrap; /* Allows items to stack on smaller screens */
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 300px; /* Space between the image and the text */
-  background-color: #006064;
-  color: white;
-  padding: 60px 40px;
-  border-radius: 30px;
-  margin-top: 30px;
-}
-
-/* Image on the left */
-.hero-image img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  border: 7px solid white;
-  object-fit: cover;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-}
-
-/* Text on the right */
-.hero-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.hero-text h1 {
-  font-size: 3em;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.hero-text h3 {
-  font-size: 1.4em;
-  font-weight: 300; /* Lighter font for the subtitle */
-  margin-bottom: 30px;
-}
-
-.hero-text .highlight {
-  color: #fff;
-}
-
-/* --- Social Icon Links --- */
-.social-links {
-  display: flex;
-  gap: 25px; /* Space between icons */
-}
-
-.social-links a {
-  color: white;
-  font-size: 2.2rem; /* Controls the size of the icons */
-  text-decoration: none;
-  transition: transform 0.3s ease; /* Smooth animation */
-}
-
-.social-links a:hover {
-  transform: scale(1.2); /* Makes icon slightly larger on hover */
-}
-
-/* ---------------- About Me Section ---------------- */
-#about {
-  text-align: center;
-}
-
-/* Main flex container for the two columns */
-.about-container {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 30px;
-  text-align: left;
-  margin-top: 20px;
-  align-items: flex-start;
-}
-
-/* Left column (Education & Experience) */
-.details-column {
-  flex: 1; /* Takes up 1 part of the space */
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px; 
-}
-
-/* Right column (Career Summary) */
 .summary-column {
-  flex: 1.5; /* Makes this column 1.5 times wider */
-  min-width: 300px;
-  background-color: #f4f4f4;
-  padding: 25px;
-  border-radius: 10px;
+    flex: 1.5;
+    min-width: 300px;
+    background-color: #f4f4f4;
+    padding: 25px;
+    border-radius: 10px;
 }
 
 .summary-column h3 {
-  margin-top: 0;
-  border-bottom: 2px solid #3c646b;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+    margin-top: 0;
+    border-bottom: 2px solid #3c646b;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* Styling for the Education and Experience boxes */
 .info-box {
-  background-color: #f4f4f4;
-  padding: 25px;
-  border-radius: 10px;
+    background-color: #f4f4f4;
+    padding: 25px;
+    border-radius: 10px;
 }
 
 .info-box h3 {
-  margin-top: 0;
-  color: #3c646b;
+    margin-top: 0;
+    color: #3c646b;
 }
 
 .info-box p {
-  margin-bottom: 5px;
-  line-height: 1.5;
+    margin-bottom: 5px;
+    line-height: 1.5;
 }
 
 .info-box a {
-    color: #3c646b;
-    text-decoration: none;
     font-weight: bold;
 }
 
-.info-box a:hover {
-    text-decoration: underline;
-}
-
-/* Download Resume Button */
 .btn-download {
-  display: inline-block;
-  margin-top: 20px; /* Space from the text above */
-  background-color: #3c646b; /* Your theme color */
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #3c646b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .btn-download:hover {
-  background-color: #2b484d; /* A darker shade on hover */
-  transform: translateY(-2px); /* A slight "lift" effect */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  text-decoration: none;
+    background-color: #2b484d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    text-decoration: none;
 }
 
-/* Styles the icon inside the button */
 .btn-download i {
-  margin-right: 8px;
+    margin-right: 8px;
 }
-/* ---------------- Skills Section ---------------- */
+
+/* ==================== SKILLS SECTION ==================== */
 #skills {
     text-align: center;
 }
 
-/* Grid container for all skill categories */
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  text-align: left;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    text-align: left;
+    margin-top: 20px;
+    align-items: start;
 }
 
-/* Each individual category box */
 .skill-category {
-  background-color: #f9f9f9;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 .skill-category h3 {
-  margin-top: 0;
-  border-bottom: 2px solid #3c646b; /* Theme color */
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  color: #333;
+    margin-top: 0;
+    border-bottom: 2px solid #3c646b;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
 }
 
-/* List that holds the skill tags */
 .skills-tags {
-  display: flex;
-  flex-direction: column; /* Makes the list vertical */
-  flex-wrap: wrap;       /* Allows wrapping into new columns */
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  max-height: 120px;     /* Sets the height for 3 items before wrapping */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    max-height: 120px;
 }
 
-/* Individual skill tag */
 .skills-tags li {
-  background-color: #e0e0e0;
-  color: #333;
-  padding: 8px 15px;
-  border-radius: 20px; /* Creates the pill shape */
-  font-size: 0.9rem;
-  font-weight: 500;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-/* ---------------- Projects / Cards ---------------- */
+/* ==================== PROJECTS SECTION ==================== */
 #projects {
     text-align: center;
     padding: 40px 10px;
@@ -593,29 +306,19 @@ section {
     transform: scale(1.1);
 }
 
-#hr-project::before {
-    background-image: url('images/hr-image.jpg'); 
-}
-
-#scrapy-project::before {
-    background-image: url('images/scrapy-image.jpg');
-}
-
-#chat-project::before {
-    background-image: url('images/chat-image.jpg');
-}
+#hr-project::before    { background-image: url('images/hr-image.jpg'); }
+#scrapy-project::before { background-image: url('images/scrapy-image.jpg'); }
+#chat-project::before   { background-image: url('images/chat-image.jpg'); }
 
 .card-content {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-.card-content h3 {
-    margin-bottom: 15px;
+.card-content h2 {
     font-size: 1.8rem;
 }
 
 .card-content p {
-    margin-bottom: 10px;
     font-size: 1rem;
     line-height: 1.4;
 }
@@ -626,7 +329,6 @@ section {
 
 .card-links a {
     color: #fff;
-    text-decoration: none;
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 8px 15px;
@@ -641,126 +343,97 @@ section {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* ---------------- Education & Certifications ---------------- */
-/* Tip: Consider giving your education list a class for more specific styling */
-#education ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-#education ul li {
-    margin-bottom: 8px;
-}
-
-/* ---------------- Footer ---------------- */
-footer {
-    text-align: center;
-    background-color: #000; /* Black footer */
-    color: white;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-/* ---------------- Contact Section ---------------- */
+/* ==================== CONTACT SECTION ==================== */
 #contact {
-  text-align: center;
+    text-align: center;
 }
 
-/* Main wrapper for the two-column layout */
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Allows stacking on small screens */
-  gap: 30px;
-  text-align: left;
-  margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+    margin-top: 30px;
 }
 
-/* Shared style for both boxes */
 .contact-box {
-  background-color: #f4f4f4;
-  padding: 30px;
-  border-radius: 15px;
-  flex: 1; /* Makes both boxes take up equal space */
-  min-width: 300px; /* Ensures boxes don't get too small */
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 300px;
 }
 
-/* Specific style for the intro box on the left */
 .intro-box {
-  text-align: center;
+    text-align: center;
 }
 
 .intro-box h3 {
-  margin: 0 0 5px 0;
-  font-size: 2rem;
-  color: #111;
+    margin: 0 0 5px 0;
+    font-size: 2rem;
+    color: #111;
 }
 
 .intro-box p {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #555;
+    margin: 0;
+    font-size: 1.1rem;
+    color: #555;
 }
 
-/* Each individual contact item in the right box */
 .contact-detail-item {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Space between icon and text */
-  margin-bottom: 15px; /* Vertical space between items */
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-/* Removes margin from the last item */
 .contact-detail-item:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .contact-detail-item:hover {
-  color: #3c646b;
+    color: #3c646b;
 }
 
 .contact-detail-item i {
-  color: #3c646b; /* Your theme color */
-  font-size: 1.5rem;
-  width: 25px; /* Ensures icons are aligned */
-  text-align: center;
+    color: #3c646b;
+    font-size: 1.5rem;
+    width: 25px;
+    text-align: center;
 }
 
-
-/* ---------------- Footer ---------------- */
+/* ==================== FOOTER ==================== */
 footer {
     text-align: center;
-    background-color: #000; /* Black footer */
+    background-color: #000;
     color: white;
     padding: 20px;
     margin-top: 50px;
 }
 
-/* ---------------- Responsive ---------------- */
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-right {
-        margin-top: 20px;
-    }
-
- 
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
+    .hero-text {
+        text-align: center;
     }
     
-    /* Tip: Add this to make project cards more fluid on mobile */
+    .social-links {
+        justify-content: center;
+    }
+
     .project-card {
         width: 90%;
-        max-width: 350px; /* Ensures they don't get bigger than intended */
+        max-width: 350px;
     }
 }
