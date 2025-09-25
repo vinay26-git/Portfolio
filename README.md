@@ -2,7 +2,7 @@
 
 A clean, responsive, and modern personal portfolio website built to showcase my skills, projects, and experience. This project was created from scratch using HTML5 and CSS3, with a focus on modern design principles like Flexbox and Grid.
 
-**Live Demo:** [**vinay-jejjari-portfolio.github.io**](https://vinay26-git.github.io/portfolio-2/) ![Portfolio Screenshot](./images/screenshot.png) ---
+**Live Demo:** [**vinay-jejjari-portfolio.github.io**](https://vinay26-git.github.io/Portfolio/) ![Portfolio Screenshot](./images/screenshot.png) ---
 
 ## 🚀 Features
 
