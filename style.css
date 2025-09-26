@@ -75,14 +75,15 @@ section {
 .hero {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 150px;
+    justify-content: center;   /* center the whole block */
+    align-items: center;       /* vertical alignment */
+    gap: 50px;                 /* spacing between image and text */
     background-color: #ffffff;
     color: #111;
     padding: 60px 20px;
     border-radius: 30px;
-    margin-top: 50px;
+    margin: 50px auto;
+    max-width: 1100px;         /* keep it neat inside page */
 }
 
 .hero-image img {
@@ -92,20 +93,51 @@ section {
     border: 7px solid #181818;
     object-fit: cover;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+    /* ✅ move image slightly right */
+    transform: translateX(20px);  /* adjust px as needed */
 }
 
 .hero-text {
     flex: 1;
     min-width: 300px;
+    text-align: center;        /* center text under heading */
+    transform: translateX(-20px); /* ✅ balance by shifting text slightly left */
 }
 
-.hero-text h1 { font-size: 3em; line-height: 1.2; margin-bottom: 10px; }
-.hero-text h3 { font-size: 1.4em; font-weight: 300; margin-bottom: 30px; }
-.hero-text .highlight { color: #006064; }
+.hero-text h1 { 
+    font-size: 3em; 
+    line-height: 1.2; 
+    margin-bottom: 10px; 
+}
 
-.social-links { display: flex; gap: 25px; }
-.social-links a { color: #333; font-size: 2.2rem; text-decoration: none; transition: transform 0.3s ease, color 0.3s ease; }
-.social-links a:hover { transform: scale(1.2); color: #006064; }
+.hero-text h3 { 
+    font-size: 1.4em; 
+    font-weight: 300; 
+    margin-bottom: 30px; 
+}
+
+.hero-text .highlight { 
+    color: #006064; 
+}
+
+.social-links { 
+    display: flex; 
+    justify-content: center;   /* center icons */
+    gap: 25px; 
+}
+
+.social-links a { 
+    color: #333; 
+    font-size: 2.2rem; 
+    text-decoration: none; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.social-links a:hover { 
+    transform: scale(1.2); 
+    color: #006064; 
+}
 
 /* ==================== ABOUT ME SECTION ==================== */
 #about {
@@ -191,4 +223,5 @@ footer {
     .social-links { justify-content: center; }
     .project-card { width: 90%; max-width: 350px; }
     .about-container, .contact-wrapper { flex-direction: column; }
+
 }
