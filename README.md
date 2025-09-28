@@ -50,11 +50,11 @@ You just need a modern web browser like Google Chrome, Firefox, or Safari.
 
 1.  Clone the repository to your local machine:
     ```sh
-    git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
+    git clone [https://github.com/vinay26-git/Portfolio]
     ```
 2.  Navigate to the project directory:
     ```sh
-    cd your-repository-name
+    cd "Portfolio"
     ```
 3.  Open the `index.html` file in your browser to view the website.
 
