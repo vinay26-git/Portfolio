@@ -21,6 +21,7 @@ This portfolio includes several key sections and features:
 
 ### Front Page 
  <img width="1346" height="606" alt="image" src="https://github.com/user-attachments/assets/c71a7b81-fdc2-42a7-b2e0-3c4fcd4fb399" />
+ 
 
 ## 🛠️ Built With
 
