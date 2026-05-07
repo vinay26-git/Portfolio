@@ -149,7 +149,7 @@ section {
     transform: scale(1.2); 
     color: #006064; 
 }
-/* ==================== ABOUT ME SECTION ==================== */
+/* ==================== ABOUT  SECTION ==================== */
 #about {
     text-align: center;
 }
@@ -260,7 +260,7 @@ section {
 #scrapy-project::before { background-image: url('images/scrapy-image.jpg'); }
 #chat-project::before   { background-image: url('images/chat-image.jpg'); }
 #flood-project::before  { background-image: url('images/agr.PNG'); }
-#ethylene-project::before { background-image: url('images/c2h4.PNG'); }
+#ethylene-project::before { background-image: url('images/c2h4.png'); }
 
 .card-content { text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); }
 .card-content h2 { font-size: 1.8rem; }
