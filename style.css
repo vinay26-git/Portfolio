@@ -226,6 +226,7 @@ section {
 }
 
 /* ==================== PROJECTS SECTION ==================== */
+
 #projects {
     text-align: center;
     padding: 40px 10px;
@@ -238,36 +239,150 @@ section {
     margin-top: 20px;
 }
 
+/* CARD */
 .project-card {
-    width: 100%;
-    min-height: 450px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     position: relative;
+    height: 430px;
+    border-radius: 20px;
     overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGE */
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+/* IMAGE ZOOM */
+.project-card:hover::before {
+    transform: scale(1.08);
+}
+
+/* PROJECT IMAGES */
+
+#hr-project::before {
+    background-image: url('images/hr-image.jpg');
+}
+
+#scrapy-project::before {
+    background-image: url('images/scrapy-image.jpg');
+}
+
+#chat-project::before {
+    background-image: url('images/chat-image.jpg');
+}
+
+#flood-project::before {
+    background-image: url('images/agr.PNG');
+}
+
+#ethylene-project::before {
+    background-image: url('images/c2h4.png');
+}
+
+/* TITLE */
+
+.card-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.8);
+    transition: opacity 0.3s ease;
+}
+
+/* OVERLAY */
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+
     padding: 25px;
     box-sizing: border-box;
-    color: #ffffff;
-    text-align: left;
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease;
 }
-.project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: cover; background-position: center; filter: blur(3px) brightness(0.7); z-index: -1; transition: transform 0.4s ease-in-out; }
-.project-card:hover::before { transform: scale(1.1); }
 
-#hr-project::before    { background-image: url('images/hr-image.jpg'); }
-#scrapy-project::before { background-image: url('images/scrapy-image.jpg'); }
-#chat-project::before   { background-image: url('images/chat-image.jpg'); }
-#flood-project::before  { background-image: url('images/agr.PNG'); }
-#ethylene-project::before { background-image: url('images/c2h4.png'); }
+/* SHOW ON HOVER */
 
-.card-content { text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); }
-.card-content h2 { font-size: 1.8rem; }
-.card-content p { font-size: 1rem; line-height: 1.4; }
-.card-links { margin-top: 20px; }
-.card-links a { color: #fff; background-color: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.3); padding: 8px 15px; border-radius: 20px; margin-right: 10px; font-weight: bold; display: inline-block; transition: background-color 0.3s ease; }
-.card-links a:hover { background-color: rgba(0, 0, 0, 0.7); }
+.project-card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HIDE TITLE */
+
+.project-card:hover .card-title {
+    opacity: 0;
+}
+
+/* TEXT */
+
+.card-overlay h2,
+.card-overlay h3,
+.card-overlay p {
+    color: white;
+}
+
+.card-overlay h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.card-overlay h3 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #00d9ff;
+}
+
+.card-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* BUTTONS */
+
+.card-links {
+    margin-top: 20px;
+}
+
+.card-links a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 25px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.card-links a:hover {
+    background: #00bcd4;
+    color: white;
+}
 
 /* ==================== CONTACT SECTION ==================== */
 #contact {
